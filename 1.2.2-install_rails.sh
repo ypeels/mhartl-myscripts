@@ -74,3 +74,23 @@ echo fix git colors
 git config --global color.ui true
 
 echo 
+echo "2012-11-10: laugh at dead link for 'download RubyGems'"
+echo "no feedback form, and i don't feel like emailing the smug bastard"
+
+echo
+echo update rubygems
+echo "hmm this results in 'Latest version currently installed. Aborting.'..."
+gem update --system 1.8.24
+
+echo
+echo "Suppress ri and rdoc documentation in .gemrc"
+echo "Listing 1.2"
+gedit ~/.gemrc
+
+echo
+echo Install rails! finally!!
+gem install rails -v 3.2.8
+
+echo
+echo Finally, install some other packages anyways... (apparently already done above)
+sudo apt-get install libxslt-dev libxml2-dev libsqlite3-dev
