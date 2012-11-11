@@ -94,3 +94,5 @@ gem install rails -v 3.2.8
 echo
 echo Finally, install some other packages anyways... (apparently already done above)
 sudo apt-get install libxslt-dev libxml2-dev libsqlite3-dev
+
+
