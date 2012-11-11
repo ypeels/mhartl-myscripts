@@ -78,6 +78,29 @@ if [ ! -e app/models/micropost.rb ]; then
 fi
 popd
 
+pushd ~/shared/demo_app
+
+
+echo
+echo stupid incomplete development environment
+echo http://stackoverflow.com/questions/8990828/
+echo Add to .bashrc
+echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"'
+
+echo 
+echo Section 2.3.5 deploy
+echo "hmm, any way to detect whether i've done this already?"
+heroku create --stack cedar
+git push heroku master
+heroku run rake db:migrate
+heroku open
+
+echo
+echo "stupid TA - there are deployment issues - looks ok in development"
+echo "stupid rails and/or saas - when it works it works, but when it doesn't..."
+
+popd
+
 
 
 popd
