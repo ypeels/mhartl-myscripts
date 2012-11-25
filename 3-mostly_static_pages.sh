@@ -42,7 +42,12 @@ if [ ! -e spec/requests/static_pages_spec.rb ]; then
     rails generate integration_test static_pages
 fi
 
+echo "some database stuff to allow 'bundle exec rake spec'"
+bundle exec rake db:migrate
+bundle exec rake db:test:prepare
+
 echo Running integration test
 bundle exec rspec spec/requests/static_pages.rb
+
 
 popd
