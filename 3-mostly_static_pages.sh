@@ -49,5 +49,20 @@ bundle exec rake db:test:prepare
 echo Running integration test
 bundle exec rspec spec/requests/static_pages.rb
 
+if [ ! -e Guardfile ]; then
+    echo Listing 3.33 - Install Guard
+    gedit Gemfile
+    bundle install --without production
+    bundle exec guard init rspec
+    
+    echo Bootstrapping spork (no effect if already bootstrapped)
+    bundle exec spork --bootstrap
+    
+    echo right above Listing 3.38 - add spork support to Guardfile (hmm not idempotent...)
+    bundle exec guard init spork
+fi
+
+
+
 
 popd
