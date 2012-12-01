@@ -14,6 +14,8 @@ echo
 echo Section 7.2
 echo "- `bundle exec rake db:reset && bundle exec rake db:test:prepare`"
 echo "- bundle exec rspec spec -e \"signup\"` will run all tests with 'signup' substring" 
-
+echo
+echo Section 7.4.4
+echo "- `git push heroku && heroku run rake db:migrate`"
 
 popd
