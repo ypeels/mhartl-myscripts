@@ -17,4 +17,13 @@ echo
 echo "Before Listing 10.29"
 echo "rails generate integration_test micropost_pages"
 
+echo
+echo "Section 10.4 Deployment"
+echo "git push heroku"
+echo "heroku config"
+echo "heroku pg:reset DATABASE ['heroku config' was uninformative]"
+echo "heroku run rake db:migrate"
+echo "heroku run rake db:populate"
+echo "heroku open"
+
 popd
